@@ -22,10 +22,6 @@ function fetchHandler(request:Request): Promise<Response> {
     return new Response(renderToString(<SMLink/>));
   }
   
-  if (url.pathname === "/link" && request.method === "GET") {
-    return new Response()
-  }
-
   return new Response("Not found", {status: 404});
 }
 
