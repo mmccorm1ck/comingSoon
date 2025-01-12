@@ -1,11 +1,11 @@
 import { renderToString } from "react-dom/server";
 import "dotenv/config";
 
-const platform = process.env.PLATFORM;
-const link     = process.env.LINK;
+const platform = process.env.PLATFORM || "Instagram";
+const link     = process.env.LINK || "https://google.com";
 
 const server = Bun.serve({
-  port: 3000,
+  port: process.env.PORT || 3000,
   fetch: fetchHandler
 });
 
