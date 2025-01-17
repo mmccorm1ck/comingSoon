@@ -1,5 +1,7 @@
 FROM oven/bun:1
 
+LABEL org.opencontainers.image.source https://github.com/mmccorm1ck/comingSoon
+
 WORKDIR /app
 
 COPY package.json bun.lockb ./
